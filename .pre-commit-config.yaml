@@ -87,12 +87,12 @@ repos:
         # This allows automatic reduction of the baseline file when needed.
         entry: sh -ec "pydoclint . && pydoclint --generate-baseline=1 ."
         pass_filenames: false
-  
+
   - repo: https://github.com/cidrblock/pylint_ruff_sync
     rev: "25.07.11"
     hooks:
       - id: pylint-ruff-sync
-  
+
   - repo: https://github.com/pappasam/toml-sort
     rev: v0.24.2
     hooks:
