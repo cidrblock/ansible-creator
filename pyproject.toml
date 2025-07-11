@@ -73,12 +73,6 @@ style = "google"
 max-attributes = 20
 min-public-methods = 0
 
-[tool.pylint.similarities]
-min-similarity-lines = 20
-ignore-comments = true
-ignore-docstrings = true
-ignore-imports = true
-
 [tool.pylint.format]
 max-line-length = 100
 
@@ -189,8 +183,10 @@ enable = [
   "I1101", # https://pylint.readthedocs.io/en/stable/user_guide/messages/info/c-extension-no-member.html
   "R0022", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/useless-option-value.html
   "R0401", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/cyclic-import.html
+  "R0801", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/duplicate-code.html
   "R0901", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-ancestors.html
   "R0902", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-many-instance-attributes.html
+  "R0903", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/too-few-public-methods.html
   "R1706", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/consider-using-ternary.html
   "R1708", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/stop-iteration-return.html
   "R1709", # https://pylint.readthedocs.io/en/stable/user_guide/messages/refactor/simplify-boolean-expression.html
@@ -266,6 +262,12 @@ enable = [
   "W4906" # https://pylint.readthedocs.io/en/stable/user_guide/messages/warning/deprecated-attribute.html
 ]
 fail-on = ["useless-suppression"]
+
+[tool.pylint.similarities]
+ignore-comments = true
+ignore-docstrings = true
+ignore-imports = true
+min-similarity-lines = 20
 
 [tool.pytest.ini_options]
 addopts = "-ra --showlocals --durations=10"
